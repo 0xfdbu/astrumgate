@@ -1,6 +1,6 @@
 # AstrumGate
 
-> **A symmetric cross-chain NFT bridge built on LayerZero, enabling seamless transfer of ERC721 tokens between Conflux, Base, and Arbitrum networks, with full metadata support, dynamic wrappers, and an integrated NFT collection factory.**
+> **A symmetric cross-chain NFT bridge built on LayerZero, enabling seamless transfer of ERC721 tokens between Conflux, Base, and Arbitrum networks, with full metadata support, dynamic wrappers, and a[...]
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Conflux](https://img.shields.io/badge/built%20on-Conflux-blue)](https://confluxnetwork.org)
@@ -8,12 +8,18 @@
 
 ---
 
+## ⚠️ SECURITY NOTICE
+
+**THIS SMART CONTRACT HAS NOT BEEN AUDITED.** This is a proof-of-concept project developed for the SummerHackfest 2025 hackathon. Use at your own risk. **DO NOT use this bridge with mainnet assets or in production environments without a professional security audit.** Users assume all risks associated with using this software. The developers are not responsible for any losses, damages, or vulnerabilities that may occur.
+
+---
+
 ## 🎯 Overview
 
 **AstrumGate** is an advanced cross-chain NFT bridge between **Conflux eSpace**, **Base**, and **Arbitrum**.  
-It enables NFT projects on Conflux to access the **$14.8B TVL liquidity on Base** and **$19.97B TVL on Arbitrum (as of writing)** and expand NFT utility beyond a single chain with symmetric bridging capabilities.  
+It enables NFT projects on Conflux to access the **$14.8B TVL liquidity on Base** and **$19.97B TVL on Arbitrum (as of writing)** and expand NFT utility beyond a single chain with symmetric bridging c[...]
 
-The project leverages **LayerZero-powered interoperability** to unlock new opportunities for NFT projects, including dynamic support for any ERC721 collection, automatic wrapper deployment for foreign NFTs, full metadata bridging (name, symbol, tokenURI), batch operations, and an NFT collection factory for easy creation and management of collections.
+The project leverages **LayerZero-powered interoperability** to unlock new opportunities for NFT projects, including dynamic support for any ERC721 collection, automatic wrapper deployment for foreign[...]
 
 Key enhancements in this updated version:
 - Symmetric bridging (works identically on all chains).
@@ -46,7 +52,7 @@ This version is a robust proof-of-concept, ready for demonstration and further p
 ## 🚀 Problem Statement
 
 NFT ecosystems are siloed by design. On Conflux, NFT projects:  
-- Cannot reach the liquidity available on other chains (e.g., Base’s $14.8B TVL, Arbitrum’s $19.97B TVL)  
+- Cannot reach the liquidity available on other chains (e.g., Base's $14.8B TVL, Arbitrum's $19.97B TVL)  
 - Have limited cross-chain utility and exposure  
 - Rely on centralized bridges or exchanges  
 
@@ -64,7 +70,7 @@ AstrumGate provides a **permissionless, symmetric ERC721 cross-chain bridge**:
 - 📜 **Bridge History** tracking in the frontend for user transparency.  
 
 **Unique aspects:**
-- Designed specifically for **Conflux eSpace** with expansion to Base’s and Arbitrum’s liquidity.  
+- Designed specifically for **Conflux eSpace** with expansion to Base's and Arbitrum's liquidity.  
 - Handles collections originating from any chain dynamically.  
 - Lightweight, hackathon-ready prototype with enhanced reliability.
 
@@ -132,7 +138,7 @@ AstrumGate provides a **permissionless, symmetric ERC721 cross-chain bridge**:
 
 ## 🏗️ Architecture
 
-The architecture is symmetric, with `DynamicONFTBridge` deployed on Conflux eSpace, Base, and Arbitrum. Native collections are locked/unlocked on their home chain, while wrappers are minted/burned on foreign chains. The `NFTCollectionFactory` enables easy creation of native collections on Conflux.
+The architecture is symmetric, with `DynamicONFTBridge` deployed on Conflux eSpace, Base, and Arbitrum. Native collections are locked/unlocked on their home chain, while wrappers are minted/burne[...]
 
 ```
     ┌────────────────────────────┐
